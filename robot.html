@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>A robot</title>
+		<link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="robot.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="robot">
+			<div class="beep"></div>
+			<div class="brain"></div>
+			<div class="torso">
+				<div class="left">j</div>
+				<div class="right">j</div>
+			</div>
+			<div class="foot"></div>
+	  		
+	  	</div>
+	  	<button class="flash">laser eyes on/off</button>
+	  	<button class="color">change color!</button>
+	  	<div class="triangle"></div>
+	</body>
+var randomRGBA = 'rgba('+red+','+green+','+blue+'1)';
+	<script>
+		$(".flash").click(function() {
+			$(".brain").toggleClass("laser");
+		});
+		$(".color").click(function(){
+			var number = Math.floor(Math.random() * 255);
+			var red = Math.floor(Math.random() * 255);
+			var green = Math.floor(Math.random() * 255);
+			var blue = Math.floor(Math.random() * 255);
+
+			var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
+			// change background to a random color
+			$("body").css("background", randomRGBA);
+			//alert(randomRGBA);
+		});
+	</script>
+</html>
